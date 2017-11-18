@@ -45,7 +45,8 @@ public class Voo {
         
     public List<Passageiro> listaPassageirosExcluidos(){
         Collections.sort(aeronave.listaPassageirosComum);
-       return aeronave.listaPassageirosComum.subList(capacidadeAviao, capacidadeReservas);
+       return aeronave.listaPassageirosComum.subList((capacidadeAviao - aeronave.listaPassageirosVip.size()), capacidadeReservas);
+       //Os passageiros que embarcarão no voo é a soma da lista vip mais aeronave.listaPassageirosComum.subList(0, (capacidadeAviao - aeronave.listaPassageirosVip.size()));
        
    }
         
